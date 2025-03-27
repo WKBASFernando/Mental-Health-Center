@@ -1,0 +1,35 @@
+.button {
+    -fx-background-color: #004B6B;
+    -fx-text-fill: white;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 50px;
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+}
+
+.button:hover {
+    -fx-background-color: #A8E6CF;
+    -fx-text-fill: black;
+    -fx-padding: 10px 18px;
+    -fx-border-color: black;
+    -fx-border-radius: 50px;
+}
+
+#topPane {
+    -fx-background-color: #004B6B;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
+
+#iconHospital {
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+    -fx-effect: dropshadow(gaussian, #004B6B, 10, 0.4, 0, 0);
+    -fx-transition: all 5s ease-in-out;
+}
+
+#iconHospital:hover {
+    -fx-scale-x: 1.2; /* Slightly Increase Size */
+    -fx-scale-y: 1.2;
+    -fx-effect: dropshadow(gaussian, #004B6B, 20, 0.7, 0, 0); /* Stronger Blue Glow */
+}
