@@ -1,9 +1,6 @@
 package com.ijse.orm.mentalhealthcenter.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,8 +22,8 @@ public class Patient {
     private String phoneNumber;
     private String address;
     private String email;
-    @OneToMany(mappedBy = "patient")
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
     private List<TherapySession> sessions;
-    @ManyToMany(mappedBy = "patients")
+    @ManyToMany(mappedBy = "patients", cascade = CascadeType.ALL)
     private List<TherapyProgram> programs;
 }

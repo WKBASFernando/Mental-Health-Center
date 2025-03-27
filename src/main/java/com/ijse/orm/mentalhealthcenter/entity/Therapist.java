@@ -19,7 +19,7 @@ public class Therapist {
     private String name;
     private String availability;
     private String description;
-    @OneToMany(mappedBy = "therapist")
+    @OneToMany(mappedBy = "therapist", cascade = CascadeType.ALL)
     private List<TherapySession> sessions;
     @ManyToOne
     @JoinColumn(name = "programId")

@@ -3,12 +3,12 @@ package com.ijse.orm.mentalhealthcenter.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 
-public class TherapyProgramController {
+public class PaymentController {
 
     @FXML
     private Button btnClear;
@@ -23,34 +23,25 @@ public class TherapyProgramController {
     private Button btnUpdate;
 
     @FXML
-    private TableColumn<?, ?> colDuration;
+    private TableColumn<?, ?> colAmount;
 
     @FXML
-    private TableColumn<?, ?> colFee;
+    private TableColumn<?, ?> colPaymentDate;
 
     @FXML
-    private TableColumn<?, ?> colSessionId;
+    private TableColumn<?, ?> colPaymentId;
 
     @FXML
-    private TableColumn<?, ?> colSessionName;
+    private DatePicker dpPaymentDate;
 
     @FXML
-    private TableView<?> tblSessions;
+    private TableView<?> tblPayments;
 
     @FXML
-    private TextField txtDuration;
+    private TextField txtAmount;
 
     @FXML
-    private TextField txtFee;
-
-    @FXML
-    private TextField txtSessionId;
-
-    @FXML
-    private TextField txtSessionName;
-
-    @FXML
-    private AnchorPane programPane;
+    private TextField txtPaymentId;
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
@@ -73,7 +64,7 @@ public class TherapyProgramController {
     }
 
     @FXML
-    void tblOnAction(ActionEvent event) {
+    void tblPaymentOnAction(ActionEvent event) {
 
     }
 

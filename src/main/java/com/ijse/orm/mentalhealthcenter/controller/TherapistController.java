@@ -3,12 +3,13 @@ package com.ijse.orm.mentalhealthcenter.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 
-public class TherapyProgramController {
+public class TherapistController {
 
     @FXML
     private Button btnClear;
@@ -23,37 +24,34 @@ public class TherapyProgramController {
     private Button btnUpdate;
 
     @FXML
-    private TableColumn<?, ?> colDuration;
+    private ComboBox<?> cmbAvailability;
 
     @FXML
-    private TableColumn<?, ?> colFee;
+    private TableColumn<?, ?> colAvailability;
 
     @FXML
-    private TableColumn<?, ?> colSessionId;
+    private TableColumn<?, ?> colDescription;
 
     @FXML
-    private TableColumn<?, ?> colSessionName;
+    private TableColumn<?, ?> colTherapistId;
 
     @FXML
-    private TableView<?> tblSessions;
+    private TableColumn<?, ?> colTherapistName;
 
     @FXML
-    private TextField txtDuration;
+    private TableView<?> tblTherapists;
 
     @FXML
-    private TextField txtFee;
+    private TextArea txtDescription;
 
     @FXML
-    private TextField txtSessionId;
+    private TextField txtTherapistId;
 
     @FXML
-    private TextField txtSessionName;
+    private TextField txtTherapistName;
 
     @FXML
-    private AnchorPane programPane;
-
-    @FXML
-    void btnClearOnAction(ActionEvent event) {
+    void btnCleatOnAction(ActionEvent event) {
 
     }
 
@@ -73,7 +71,7 @@ public class TherapyProgramController {
     }
 
     @FXML
-    void tblOnAction(ActionEvent event) {
+    void tblTherapistOnAction(ActionEvent event) {
 
     }
 

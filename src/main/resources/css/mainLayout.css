@@ -25,7 +25,7 @@
     -fx-scale-x: 1;
     -fx-scale-y: 1;
     -fx-effect: dropshadow(gaussian, #004B6B, 10, 0.4, 0, 0);
-    -fx-transition: all 5s ease-in-out;
+    -fx-transition: all 1s ease-in-out;
 }
 
 #iconHospital:hover {
@@ -33,3 +33,5 @@
     -fx-scale-y: 1.2;
     -fx-effect: dropshadow(gaussian, #004B6B, 20, 0.7, 0, 0); /* Stronger Blue Glow */
 }
+
+

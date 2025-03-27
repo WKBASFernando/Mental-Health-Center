@@ -19,7 +19,7 @@ public class TherapyProgram {
     private String  name;
     private String  duration;
     private double fee;
-    @OneToMany(mappedBy = "therapyProgram")
+    @OneToMany(mappedBy = "therapyProgram", cascade = CascadeType.ALL   )
     private List<Therapist> therapists;
     @ManyToMany
     private List<Patient> patients;

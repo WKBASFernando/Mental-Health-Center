@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="782.0" prefWidth="1536.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ijse.orm.mentalhealthcenter.controller.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="782.0" prefWidth="1536.0" stylesheets="@../css/mainLayout.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ijse.orm.mentalhealthcenter.controller.MainController">
    <children>
       <Pane fx:id="topPane" layoutX="130.0" layoutY="126.0" prefHeight="102.0" prefWidth="1536.0" AnchorPane.bottomAnchor="680.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -36,7 +36,7 @@
       </Pane>
       <Pane layoutX="142.0" layoutY="198.0" prefHeight="699.0" prefWidth="236.0" style="-fx-background-color: #373A40;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="102.0">
          <children>
-            <Button fx:id="btnTherapyProgram" layoutX="17.0" layoutY="204.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Therapy Programs" textFill="WHITE">
+            <Button fx:id="btnTherapyProgram" layoutX="17.0" layoutY="204.0" mnemonicParsing="false" onAction="#therapyProgramOnAction" prefHeight="40.0" prefWidth="200.0" text="Therapy Programs" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -44,7 +44,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnPatients" layoutX="17.0" layoutY="272.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Patients" textFill="WHITE">
+            <Button fx:id="btnPatients" layoutX="17.0" layoutY="272.0" mnemonicParsing="false" onAction="#patientOnAction" prefHeight="40.0" prefWidth="200.0" text="Patients" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -52,7 +52,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnTherapists" layoutX="18.0" layoutY="342.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Therapists" textFill="WHITE">
+            <Button fx:id="btnTherapists" layoutX="18.0" layoutY="342.0" mnemonicParsing="false" onAction="#therapistOnAction" prefHeight="40.0" prefWidth="200.0" text="Therapists" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -60,7 +60,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnTherapySessions" layoutX="18.0" layoutY="412.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Appointments" textFill="WHITE">
+            <Button fx:id="btnTherapySessions" layoutX="18.0" layoutY="412.0" mnemonicParsing="false" onAction="#appointmentsOnAction" prefHeight="40.0" prefWidth="200.0" text="Appointments" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -68,7 +68,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="BtnPayments" layoutX="18.0" layoutY="483.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Payments" textFill="WHITE">
+            <Button fx:id="BtnPayments" layoutX="18.0" layoutY="483.0" mnemonicParsing="false" onAction="#paymentOnAction" prefHeight="40.0" prefWidth="200.0" text="Payments" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -76,7 +76,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnUsers" layoutX="18.0" layoutY="553.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Users" textFill="WHITE">
+            <Button fx:id="btnUsers" layoutX="18.0" layoutY="553.0" mnemonicParsing="false" onAction="#usersOnAction" prefHeight="40.0" prefWidth="200.0" text="Users" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -96,6 +96,6 @@
             </Label>
          </children>
       </Pane>
-      <AnchorPane fx:id="content" layoutX="378.0" layoutY="234.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="102.0" />
+      <AnchorPane fx:id="content" layoutX="233.0" layoutY="120.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="-17.600000000000023" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="102.0" />
    </children>
 </AnchorPane>

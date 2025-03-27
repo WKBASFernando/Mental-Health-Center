@@ -3,12 +3,12 @@ package com.ijse.orm.mentalhealthcenter.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 
-public class TherapyProgramController {
+public class PatientController {
 
     @FXML
     private Button btnClear;
@@ -23,34 +23,49 @@ public class TherapyProgramController {
     private Button btnUpdate;
 
     @FXML
-    private TableColumn<?, ?> colDuration;
+    private ComboBox<?> cmbGender;
 
     @FXML
-    private TableColumn<?, ?> colFee;
+    private TableColumn<?, ?> colAddress;
 
     @FXML
-    private TableColumn<?, ?> colSessionId;
+    private TableColumn<?, ?> colAge;
 
     @FXML
-    private TableColumn<?, ?> colSessionName;
+    private TableColumn<?, ?> colEmail;
 
     @FXML
-    private TableView<?> tblSessions;
+    private TableColumn<?, ?> colGender;
 
     @FXML
-    private TextField txtDuration;
+    private TableColumn<?, ?> colPatientId;
 
     @FXML
-    private TextField txtFee;
+    private TableColumn<?, ?> colPatientName;
 
     @FXML
-    private TextField txtSessionId;
+    private TableColumn<?, ?> colPhoneNumber;
 
     @FXML
-    private TextField txtSessionName;
+    private TableView<?> tblPatients;
 
     @FXML
-    private AnchorPane programPane;
+    private TextField txtAddress;
+
+    @FXML
+    private TextField txtAge;
+
+    @FXML
+    private TextField txtEmail;
+
+    @FXML
+    private TextField txtPatientId;
+
+    @FXML
+    private TextField txtPatientName;
+
+    @FXML
+    private TextField txtPhoneNumber;
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
@@ -73,7 +88,7 @@ public class TherapyProgramController {
     }
 
     @FXML
-    void tblOnAction(ActionEvent event) {
+    void tblPatientOnAction(ActionEvent event) {
 
     }
 
