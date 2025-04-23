@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Payment {
+public class Payment implements SuperEntity{
     @Id
     private String id;
     private Double amount;

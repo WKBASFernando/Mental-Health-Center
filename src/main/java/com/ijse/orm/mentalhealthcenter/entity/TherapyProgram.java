@@ -13,14 +13,12 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class TherapyProgram {
+public class TherapyProgram implements SuperEntity{
     @Id
     private String  id;
     private String  name;
     private String  duration;
     private double fee;
-    @OneToMany(mappedBy = "therapyProgram", cascade = CascadeType.ALL   )
-    private List<Therapist> therapists;
-    @ManyToMany
+    @OneToMany(mappedBy = "therapyProgram")
     private List<Patient> patients;
 }

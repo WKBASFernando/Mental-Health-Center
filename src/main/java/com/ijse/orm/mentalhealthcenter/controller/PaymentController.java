@@ -4,11 +4,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class PaymentController {
+
+    @FXML
+    private Button btnAddAppointment;
 
     @FXML
     private Button btnClear;
@@ -35,6 +39,9 @@ public class PaymentController {
     private DatePicker dpPaymentDate;
 
     @FXML
+    private Label lblSessionId;
+
+    @FXML
     private TableView<?> tblPayments;
 
     @FXML
@@ -42,6 +49,11 @@ public class PaymentController {
 
     @FXML
     private TextField txtPaymentId;
+
+    @FXML
+    void btnAddAppointmentOnAction(ActionEvent event) {
+
+    }
 
     @FXML
     void btnClearOnAction(ActionEvent event) {

@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class Therapist {
+public class Therapist implements SuperEntity {
     @Id
     private String id;
     private String name;
@@ -21,7 +21,5 @@ public class Therapist {
     private String description;
     @OneToMany(mappedBy = "therapist", cascade = CascadeType.ALL)
     private List<TherapySession> sessions;
-    @ManyToOne
-    @JoinColumn(name = "programId")
-    private TherapyProgram therapyProgram;
+
 }

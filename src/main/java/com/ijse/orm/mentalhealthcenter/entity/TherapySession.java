@@ -14,7 +14,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class TherapySession {
+public class TherapySession implements SuperEntity{
     @Id
     private String id;
     private String date;

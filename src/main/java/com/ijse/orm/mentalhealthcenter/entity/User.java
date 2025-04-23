@@ -4,7 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class User implements SuperEntity{
     @Id
     private String username;
     private String password;

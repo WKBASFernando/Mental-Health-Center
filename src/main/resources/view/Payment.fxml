@@ -41,12 +41,12 @@
                     </font>
                 </TextField>
 
-                <Label layoutX="600.0" layoutY="70.0" text="Payment Date:" textFill="#34495e">
+                <Label layoutX="590.0" layoutY="70.0" text="Payment Date:" textFill="#34495e">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <DatePicker fx:id="dpPaymentDate" layoutX="600.0" layoutY="95.0" prefHeight="35.0" prefWidth="250.0" promptText="Select Payment Date" style="-fx-background-radius: 5;">
+                <DatePicker fx:id="dpPaymentDate" layoutX="590.0" layoutY="95.0" prefHeight="35.0" prefWidth="250.0" promptText="Select Payment Date" style="-fx-background-radius: 5;">
                     
                 </DatePicker>
 
@@ -73,6 +73,21 @@
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Button>
+            <Label layoutX="897.0" layoutY="70.0" prefHeight="20.0" prefWidth="110.0" text="Appointment ID:" textFill="#34495e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAddAppointment" layoutX="889.0" layoutY="95.0" mnemonicParsing="false" onAction="#btnAddAppointmentOnAction" prefHeight="40.0" prefWidth="188.0" style="-fx-background-color: #004B6B; -fx-background-radius: 50;" text="Add Appointment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblSessionId" layoutX="1003.0" layoutY="70.0" prefHeight="20.0" prefWidth="110.0" text="ID eka" textFill="#34495e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
             </children>
         </AnchorPane>
 
