@@ -8,16 +8,16 @@ import lombok.*;
 @NoArgsConstructor
 @Getter
 @Setter
+@Table(name = "appointment")
 public class Appointment implements SuperEntity {
     @Id
     private String id;
 
     @ManyToOne
-    @MapsId("patientID")
+    @JoinColumn(name = "patient_id")
     private Patient patient;
 
     @ManyToOne
-    @MapsId("programID")
+    @JoinColumn(name = "program_id")
     private TherapyProgram therapyProgram;
-
 }

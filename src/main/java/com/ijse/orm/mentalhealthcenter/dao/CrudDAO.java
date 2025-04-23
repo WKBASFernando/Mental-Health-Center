@@ -1,6 +1,6 @@
 package com.ijse.orm.mentalhealthcenter.dao;
 
-import lk.ijse.project.mentalHealthTherapyCenter.entity.SuperEntity;
+import com.ijse.orm.mentalhealthcenter.entity.SuperEntity;
 import org.hibernate.Session;
 
 import java.sql.SQLException;

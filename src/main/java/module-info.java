@@ -10,5 +10,6 @@ module com.ijse.orm.mentalhealthcenter {
     opens com.ijse.orm.mentalhealthcenter.config to jakarta.persistence;
 
     opens com.ijse.orm.mentalhealthcenter.controller to javafx.fxml;
-    exports com.ijse.orm.mentalhealthcenter;
+    opens com.ijse.orm.mentalhealthcenter.dto.tm to javafx.base;
+    opens com.ijse.orm.mentalhealthcenter to javafx.graphics;
 }

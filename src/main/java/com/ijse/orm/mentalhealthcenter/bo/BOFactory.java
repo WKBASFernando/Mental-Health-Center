@@ -1,6 +1,6 @@
-package com.ijse.orm.mentalhealthcenter.dto;
+package com.ijse.orm.mentalhealthcenter.bo;
 
-import lk.ijse.project.mentalHealthTherapyCenter.service.custom.impl.*;
+import com.ijse.orm.mentalhealthcenter.bo.custom.impl.*;
 
 public class BOFactory {
     public static BOFactory boFactory;
@@ -20,7 +20,7 @@ public class BOFactory {
             case PATIENT -> (T) new PatientBOImpl();
             case PAYMENT -> (T) new PaymentBOImpl();
             case THERAPIST -> (T) new TherapistBOImpl();
-            case THERAPY_PROGRAMS -> (T) new TProgramBOImpl();
+            case THERAPY_PROGRAMS -> (T) new TherapyProgramBOImpl();
         };
     }
 

@@ -1,10 +1,18 @@
 package com.ijse.orm.mentalhealthcenter.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-public class User implements SuperEntity{
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@Table(name = "user")
+public class User implements SuperEntity {
     @Id
     private String username;
     private String password;

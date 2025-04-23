@@ -84,6 +84,7 @@ public class MainController implements Initializable {
             content.getChildren().add(load);
         } catch (IOException e) {
             new Alert(Alert.AlertType.ERROR, "Failed to load UI").show();
+            e.printStackTrace();
         }
     }
 

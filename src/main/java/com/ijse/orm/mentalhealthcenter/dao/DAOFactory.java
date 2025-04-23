@@ -1,6 +1,6 @@
 package com.ijse.orm.mentalhealthcenter.dao;
 
-import lk.ijse.project.mentalHealthTherapyCenter.repostory.custom.impl.*;
+import com.ijse.orm.mentalhealthcenter.dao.custom.impl.*;
 
 public class DAOFactory {
     public static DAOFactory daoFactory;
@@ -15,14 +15,13 @@ public class DAOFactory {
     @SuppressWarnings("unchecked")
     public <T extends SuperDAO>T getDAO(DAOType daoType) {
         return switch (daoType) {
-            case APPOINTMENTS -> (T) new AppointmentDAOImpl();
-            case USER ->(T) new UserDAOImpl();
+//            case APPOINTMENTS -> (T) new AppointmentDAOImpl();
+//            case USER ->(T) new UserDAOImpl();
             case PATIENT -> (T) new PatientDAOImpl();
-            case PAYMENT -> (T) new PaymentDAOImpl();
-            case THERAPIST -> (T) new TherapistDAOImpl();
-            case THERAPY_PROGRAMS -> (T) new TProgramDAOImpl();
-            case QUERY -> (T) new QueryDAOImpl();
-            case PROGRAM_DETAILS -> (T) new ProgramDetailsDAOImpl();
+//            case PAYMENT -> (T) new PaymentDAOImpl();
+//            case THERAPIST -> (T) new TherapistDAOImpl();
+//            case THERAPY_PROGRAMS -> (T) new TProgramDAOImpl();
+//            case PROGRAM_DETAILS -> (T) new ProgramDetailsDAOImpl();
             default -> null;
         };
     }

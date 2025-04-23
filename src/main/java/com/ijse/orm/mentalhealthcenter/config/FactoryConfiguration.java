@@ -11,6 +11,7 @@ public class FactoryConfiguration {
     private FactoryConfiguration() {
         Configuration configuration = new Configuration().configure()
                 .addAnnotatedClass(Patient.class)
+                .addAnnotatedClass(Appointment.class)
                 .addAnnotatedClass(Payment.class)
                 .addAnnotatedClass(TherapySession.class)
                 .addAnnotatedClass(Therapist.class)

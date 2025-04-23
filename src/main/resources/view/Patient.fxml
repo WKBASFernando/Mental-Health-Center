@@ -24,11 +24,6 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="txtPatientId" layoutX="14.0" layoutY="95.0" prefHeight="35.0" prefWidth="250.0" promptText="Enter Patient ID" style="-fx-background-radius: 5;">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </TextField>
 
                 <Label layoutX="300.0" layoutY="70.0" text="Full Name:" textFill="#34495e">
                     <font>
@@ -119,18 +114,23 @@
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Button>
+            <Label fx:id="lblPatientId" layoutX="14.0" layoutY="95.0" prefHeight="35.0" prefWidth="250.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
             </children>
         </AnchorPane>
 
-        <TableView fx:id="tblPatients" layoutX="14.0" layoutY="350.0" onSort="#tblPatientOnAction" prefHeight="330.0" prefWidth="1272.0" style="-fx-background-radius: 10;">
+        <TableView fx:id="tblPatients" layoutX="14.0" layoutY="350.0" onMouseClicked="#tblPatientOnAction" prefHeight="330.0" prefWidth="1272.0" style="-fx-background-radius: 10;">
             <columns>
                 <TableColumn fx:id="colPatientId" prefWidth="150.0" text="Patient ID" />
                 <TableColumn fx:id="colPatientName" prefWidth="250.0" text="Full Name" />
                 <TableColumn fx:id="colAge" prefWidth="100.0" text="Age" />
                 <TableColumn fx:id="colGender" prefWidth="150.0" text="Gender" />
                 <TableColumn fx:id="colPhoneNumber" prefWidth="200.0" text="Phone Number" />
-                <TableColumn fx:id="colEmail" prefWidth="250.0" text="Email" />
-                <TableColumn fx:id="colAddress" prefWidth="170.0" text="Address" />
+                <TableColumn fx:id="colAddress" prefWidth="185.5999755859375" text="Address" />
+                <TableColumn fx:id="colEmail" prefWidth="235.199951171875" text="Email" />
             </columns>
         </TableView>
     </children>

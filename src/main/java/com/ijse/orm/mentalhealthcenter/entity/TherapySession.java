@@ -1,28 +1,28 @@
 package com.ijse.orm.mentalhealthcenter.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import java.time.LocalDateTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity
-public class TherapySession implements SuperEntity{
+@Table(name = "therapy_session")
+public class TherapySession implements SuperEntity {
     @Id
     private String id;
-    private String date;
-    private String time;
+    private LocalDateTime sessionDateTime;
+
     @ManyToOne
-    @JoinColumn(name = "patientId")
+    @JoinColumn(name = "patient_id")
     private Patient patient;
+
     @ManyToOne
-    @JoinColumn(name = "therapistId")
+    @JoinColumn(name = "therapist_id")
     private Therapist therapist;
 }
