@@ -15,8 +15,7 @@ import java.time.LocalDateTime;
 @Table(name = "therapy_session")
 public class TherapySession implements SuperEntity {
     @Id
-    private String id;
-    private LocalDateTime sessionDateTime;
+    private long id;
 
     @ManyToOne
     @JoinColumn(name = "patient_id")

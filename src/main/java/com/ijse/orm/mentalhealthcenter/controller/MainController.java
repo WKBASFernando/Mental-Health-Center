@@ -49,7 +49,7 @@ public class MainController implements Initializable {
 
     @FXML
     void appointmentsOnAction(ActionEvent event) {
-
+        navigateTo("/view/Appointment.fxml");
     }
 
     @FXML
