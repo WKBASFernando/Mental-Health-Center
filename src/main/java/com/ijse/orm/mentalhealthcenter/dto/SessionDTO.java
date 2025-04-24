@@ -7,12 +7,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class AppointmentDTO {
-    private String id;
-    private String time;
-    private String notes;
-    private String date;
-    private String program_id;
+public class SessionDTO {
+    private long id;
     private String patient_id;
     private String therapist_id;
 }
