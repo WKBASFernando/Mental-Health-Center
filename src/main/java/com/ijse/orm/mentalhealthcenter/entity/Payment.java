@@ -17,7 +17,7 @@ public class Payment implements SuperEntity {
     @Id
     private String id;
     private Double amount;
-    private LocalDate paymentDate;
+    private String paymentDate;
 
     @ManyToOne
     @JoinColumn(name = "patient_id")
