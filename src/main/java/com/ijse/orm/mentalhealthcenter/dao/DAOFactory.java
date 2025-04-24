@@ -15,13 +15,13 @@ public class DAOFactory {
     @SuppressWarnings("unchecked")
     public <T extends SuperDAO>T getDAO(DAOType daoType) {
         return switch (daoType) {
-//            case APPOINTMENTS -> (T) new AppointmentDAOImpl();
+            case APPOINTMENTS -> (T) new AppointmentDAOImpl();
 //            case USER ->(T) new UserDAOImpl();
             case PATIENT -> (T) new PatientDAOImpl();
 //            case PAYMENT -> (T) new PaymentDAOImpl();
             case THERAPIST -> (T) new TherapistDAOImpl();
             case THERAPY_PROGRAMS -> (T) new TherapyProgramDAOImpl();
-//            case PROGRAM_DETAILS -> (T) new ProgramDetailsDAOImpl();
+            case THERAPY_SESSION -> (T) new TherapySessionsDAOImpl();
             default -> null;
         };
     }

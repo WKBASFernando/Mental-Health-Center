@@ -22,14 +22,14 @@
                 <Font name="Impact" size="15.0" />
             </font>
         </Label>
-        <Line endX="744.7999877929688" endY="3.814697265625E-6" layoutX="128.0" layoutY="54.0" startX="-100.0" />
-        <Line endX="-93.4000015258789" endY="233.39999389648438" layoutX="115.0" layoutY="54.0" startX="756.199951171875" startY="233.39999389648438" />
-        <Label layoutX="21.0" layoutY="260.0" text="Session Details">
+        <Line endX="355.4667053222656" endY="3.814697265625E-6" layoutX="128.0" layoutY="54.0" startX="-100.0" />
+        <Line endX="-93.4000015258789" endY="233.39999389648438" layoutX="615.0" layoutY="-180.0" startX="355.26666259765625" startY="233.39999389648438" />
+        <Label layoutX="522.0" layoutY="28.0" text="Session Details">
             <font>
                 <Font name="Impact" size="15.0" />
             </font>
         </Label>
-        <VBox layoutX="21.0" layoutY="288.0" prefHeight="163.0" prefWidth="128.0">
+        <VBox layoutX="524.0" layoutY="83.0" prefHeight="163.0" prefWidth="128.0">
             <children>
                 <Label prefHeight="28.0" prefWidth="130.0" text="Session ID">
                     <font>
@@ -77,21 +77,21 @@
                 <Insets />
             </opaqueInsets>
         </VBox>
-        <Label fx:id="sessionID" layoutX="212.0" layoutY="306.0" prefHeight="28.0" prefWidth="130.0" text="Session ID">
+        <Label fx:id="sessionID" layoutX="715.0" layoutY="101.0" prefHeight="28.0" prefWidth="130.0" text="Session ID">
             <font>
                 <Font name="Georgia" size="18.0" />
             </font>
         </Label>
-        <TextField fx:id="sessionTime" layoutX="186.0" layoutY="355.0" prefHeight="26.0" prefWidth="182.0" promptText="00:00:00" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
-        <TextField fx:id="sessionNotes" layoutX="186.0" layoutY="401.0" prefHeight="26.0" prefWidth="182.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
-        <DatePicker fx:id="sessionDate" layoutX="186.0" layoutY="444.0" prefHeight="26.0" prefWidth="182.0" />
-        <Line endX="-93.4000015258789" endY="233.39999389648438" layoutX="115.0" layoutY="288.0" startX="759.3999633789062" startY="233.4000244140625" />
-        <Label layoutX="24.0" layoutY="496.0" text="Payment Details">
+        <TextField fx:id="sessionTime" layoutX="689.0" layoutY="150.0" prefHeight="26.0" prefWidth="182.0" promptText="00:00:00" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
+        <TextField fx:id="sessionNotes" layoutX="689.0" layoutY="196.0" prefHeight="26.0" prefWidth="182.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
+        <DatePicker fx:id="sessionDate" layoutX="689.0" layoutY="239.0" prefHeight="26.0" prefWidth="182.0" />
+        <Line endX="-93.4000015258789" endY="233.39999389648438" layoutX="115.0" layoutY="243.0" startX="759.3999633789062" startY="233.4000244140625" />
+        <Label layoutX="24.0" layoutY="451.0" text="Payment Details">
             <font>
                 <Font name="Impact" size="15.0" />
             </font>
         </Label>
-        <VBox layoutX="24.0" layoutY="522.0" prefHeight="137.0" prefWidth="162.0">
+        <VBox layoutX="24.0" layoutY="482.0" prefHeight="137.0" prefWidth="162.0">
             <children>
                 <Label prefHeight="28.0" prefWidth="130.0" text="Payment ID">
                     <font>
@@ -120,7 +120,7 @@
                 <Insets />
             </opaqueInsets>
         </VBox>
-        <VBox layoutX="393.0" layoutY="527.0" prefHeight="137.0" prefWidth="162.0">
+        <VBox layoutX="393.0" layoutY="485.0" prefHeight="137.0" prefWidth="162.0">
             <children>
                 <Label prefHeight="48.0" prefWidth="164.0" text="Payment Method">
                     <font>
@@ -135,7 +135,7 @@
                 <Insets />
             </opaqueInsets>
         </VBox>
-        <Label fx:id="paymentID" layoutX="212.0" layoutY="522.0" prefHeight="28.0" prefWidth="130.0" text="Payment ID">
+        <Label fx:id="paymentID" layoutX="212.0" layoutY="483.0" prefHeight="28.0" prefWidth="130.0" text="Payment ID">
             <font>
                 <Font name="Georgia" size="20.0" />
             </font>
@@ -143,29 +143,29 @@
                 <Insets top="12.0" />
             </padding>
         </Label>
-        <TextField fx:id="payAMOUNT" layoutX="185.0" layoutY="582.0" prefHeight="26.0" prefWidth="182.0" promptText="Rs.0000" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
-        <ComboBox fx:id="paymentMethod" layoutX="589.0" layoutY="540.0" opacity="0.58" prefHeight="26.0" prefWidth="215.0" promptText="select your payment method" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
-        <Label layoutX="578.0" layoutY="648.0" prefHeight="36.0" prefWidth="50.0" text="Date :">
+        <TextField fx:id="payAMOUNT" layoutX="185.0" layoutY="543.0" prefHeight="26.0" prefWidth="182.0" promptText="Rs.0000" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
+        <ComboBox fx:id="paymentMethod" layoutX="589.0" layoutY="497.0" opacity="0.58" prefHeight="26.0" prefWidth="215.0" promptText="select your payment method" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
+        <Label layoutX="1123.0" layoutY="52.0" prefHeight="36.0" prefWidth="50.0" text="Date :">
             <font>
                 <Font name="Impact" size="16.0" />
             </font>
         </Label>
-        <Label fx:id="date" layoutX="633.0" layoutY="648.0" prefHeight="36.0" prefWidth="114.0" text="dd/mm/yy">
+        <Label fx:id="date" layoutX="1178.0" layoutY="52.0" prefHeight="36.0" prefWidth="114.0" text="dd/mm/yy">
             <font>
                 <Font name="Impact" size="16.0" />
             </font>
         </Label>
-        <Label layoutX="769.0" layoutY="648.0" prefHeight="36.0" prefWidth="42.0" text="Time:">
+        <Label layoutX="1124.0" layoutY="14.0" prefHeight="36.0" prefWidth="42.0" text="Time:">
             <font>
                 <Font name="Impact" size="16.0" />
             </font>
         </Label>
-        <Label fx:id="time" layoutX="817.0" layoutY="648.0" prefHeight="36.0" prefWidth="63.0" text="00:00:00">
+        <Label fx:id="time" layoutX="1177.0" layoutY="14.0" prefHeight="36.0" prefWidth="63.0" text="00:00:00">
             <font>
                 <Font name="Impact" size="16.0" />
             </font>
         </Label>
-        <Button fx:id="addAppointmentBTN" layoutX="1008.0" layoutY="80.0" mnemonicParsing="false" onAction="#addAppointmentBTNAction" prefHeight="48.0" prefWidth="198.0" text="Add Appointments" textFill="WHITE">
+        <Button fx:id="addAppointmentBTN" layoutX="24.0" layoutY="622.0" mnemonicParsing="false" onAction="#addAppointmentBTNAction" prefHeight="48.0" prefWidth="198.0" text="Add Appointments" textFill="WHITE">
             <font>
                 <Font name="Georgia Bold" size="15.0" />
             </font>
@@ -180,7 +180,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
-        <Button fx:id="reset" layoutX="1008.0" layoutY="160.0" mnemonicParsing="false" onAction="#resetAction" prefHeight="48.0" prefWidth="198.0" text="Reset Details" textFill="WHITE">
+        <Button fx:id="reset" layoutX="281.0" layoutY="624.0" mnemonicParsing="false" onAction="#resetAction" prefHeight="48.0" prefWidth="198.0" text="Reset Details" textFill="WHITE">
             <font>
                 <Font name="Georgia Bold" size="15.0" />
             </font>
@@ -195,18 +195,18 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
-        <Button fx:id="addDoctors" layoutX="442.0" layoutY="306.0" mnemonicParsing="false" onMouseClicked="#addDoctorsAction" prefHeight="27.0" prefWidth="107.0" text="Assign Doctors" textFill="WHITE">
+        <Button fx:id="addDoctors" layoutX="519.0" layoutY="329.0" mnemonicParsing="false" onMouseClicked="#addDoctorsAction" prefHeight="27.0" prefWidth="149.0" text="Assign Doctors" textFill="WHITE">
             <font>
                 <Font name="Impact" size="14.0" />
             </font>
         </Button>
-        <Button fx:id="addPrograms" layoutX="432.0" layoutY="427.0" mnemonicParsing="false" onMouseClicked="#addProgramsAction" prefHeight="27.0" prefWidth="128.0" text="Choose  Programs" textFill="WHITE">
+        <Button fx:id="addPrograms" layoutX="840.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#addProgramsAction" prefHeight="27.0" prefWidth="179.0" text="Choose  Programs" textFill="WHITE">
             <font>
                 <Font name="Impact" size="14.0" />
             </font>
         </Button>
-        <ListView fx:id="programmsListView" layoutX="604.0" layoutY="395.0" prefHeight="111.0" prefWidth="238.0" />
-        <Label fx:id="docLoadLabel" alignment="TOP_LEFT" layoutX="604.0" layoutY="311.0" prefHeight="70.0" prefWidth="238.0" text="Session ID" wrapText="true">
+        <ListView fx:id="programmsListView" layoutX="1047.0" layoutY="291.0" prefHeight="111.0" prefWidth="238.0" />
+        <Label fx:id="docLoadLabel" alignment="TOP_LEFT" layoutX="682.0" layoutY="331.0" prefHeight="70.0" prefWidth="137.0" text="Session ID" wrapText="true">
             <font>
                 <Font name="Georgia" size="18.0" />
             </font>
@@ -226,7 +226,7 @@
                 <Font name="Impact" size="14.0" />
             </font>
         </Button>
-        <VBox fx:id="vbox1" layoutX="502.0" layoutY="66.0" prefHeight="200.0" prefWidth="174.0">
+        <VBox fx:id="vbox1" layoutX="20.0" layoutY="225.0" prefHeight="200.0" prefWidth="174.0">
             <children>
                 <Label fx:id="patientID" prefHeight="28.0" prefWidth="181.0" text="Patient ID">
                     <font>
@@ -262,7 +262,7 @@
                 </Label>
             </children>
         </VBox>
-        <VBox fx:id="vbox2" layoutX="711.0" layoutY="66.0" prefHeight="200.0" prefWidth="162.0">
+        <VBox fx:id="vbox2" layoutX="287.0" layoutY="226.0" prefHeight="200.0" prefWidth="162.0">
             <children>
                 <Label fx:id="patientGender" prefHeight="28.0" prefWidth="166.0" text="Gender">
                     <font>
@@ -298,7 +298,7 @@
                 </Label>
             </children>
         </VBox>
-        <Button fx:id="viewAppointmentsBTN" layoutX="1008.0" layoutY="240.0" mnemonicParsing="false" onAction="#viewAppointmentsBTNAction" prefHeight="48.0" prefWidth="198.0" text="View Appointments" textFill="WHITE">
+        <Button fx:id="viewAppointmentsBTN" layoutX="538.0" layoutY="624.0" mnemonicParsing="false" onAction="#viewAppointmentsBTNAction" prefHeight="48.0" prefWidth="198.0" text="View Appointments" textFill="WHITE">
             <font>
                 <Font name="Georgia Bold" size="15.0" />
             </font>
@@ -313,7 +313,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
-        <Button fx:id="printBillBTN" layoutX="1008.0" layoutY="320.0" mnemonicParsing="false" onAction="#printBillBTNAction" prefHeight="48.0" prefWidth="198.0" text="Print the Bill" textFill="WHITE">
+        <Button fx:id="printBillBTN" layoutX="800.0" layoutY="624.0" mnemonicParsing="false" onAction="#printBillBTNAction" prefHeight="48.0" prefWidth="198.0" text="Print the Bill" textFill="WHITE">
             <font>
                 <Font name="Georgia Bold" size="15.0" />
             </font>
@@ -328,7 +328,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
-        <Button fx:id="PatientsBTN" layoutX="1008.0" layoutY="403.0" mnemonicParsing="false" onAction="#PatientsBTNAction" prefHeight="48.0" prefWidth="198.0" text="Patients" textFill="WHITE">
+        <Button fx:id="PatientsBTN" layoutX="1065.0" layoutY="624.0" mnemonicParsing="false" onAction="#PatientsBTNAction" prefHeight="48.0" prefWidth="198.0" text="Patients" textFill="WHITE">
             <font>
                 <Font name="Georgia Bold" size="15.0" />
             </font>
@@ -343,5 +343,6 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </Button>
+      <Line endX="-100.00003051757812" endY="319.4666442871094" layoutX="603.0" layoutY="100.0" startX="-100.00003051757812" startY="-20.800003051757812" />
     </children>
 </AnchorPane>
