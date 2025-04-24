@@ -16,6 +16,7 @@ import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class PatientController implements Initializable {
@@ -87,85 +88,103 @@ public class PatientController implements Initializable {
         String patientID = lblPatientId.getText();
 
         if (patientID.isEmpty()) {
-            new Alert(Alert.AlertType.CONFIRMATION, " Please select data from table",ButtonType.CLOSE).show();
+            new Alert(Alert.AlertType.WARNING, "No therapist selected 💀", ButtonType.OK).show();
             return;
         }
-        boolean isDeleted = patientBO.deletePatient(patientID);
-        if (isDeleted) {
-            refreshPage();
-            new Alert(Alert.AlertType.INFORMATION, "Deleted Successfully",ButtonType.OK).show();
-        }else {
-            new Alert(Alert.AlertType.ERROR, "Failed to Delete",ButtonType.OK).show();
+
+        Alert confirmation = new Alert(Alert.AlertType.CONFIRMATION,
+                "Are you sure you wanna delete this patient? This action can't be undone 🚫",
+                ButtonType.YES, ButtonType.NO);
+        confirmation.setTitle("Delete Confirmation");
+        confirmation.setHeaderText("⚠️ Confirm Delete");
+
+        // Show and wait for user's decision
+        Optional<ButtonType> result = confirmation.showAndWait();
+
+        if (result.isPresent() && result.get() == ButtonType.YES) {
+            boolean isDeleted = patientBO.deletePatient(patientID);
+            if (isDeleted) {
+                new Alert(Alert.AlertType.INFORMATION, "Patient deleted successfully ✅").show();
+                refreshPage();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Failed to delete patient ❌").show();
+            }
+        } else {
+            new Alert(Alert.AlertType.INFORMATION, "Deletion cancelled 🙅").show();
         }
     }
 
-    @FXML
-    void btnSaveOnAction(ActionEvent event) throws Exception {
-        String patientId = lblPatientId.getText();
-        String patientName = txtPatientName.getText();
-        int age = Integer.parseInt(txtAge.getText());
-        String patientAge = txtAge.getText();
-        String patientGender = cmbGender.getSelectionModel().getSelectedItem();
-        String patientPhoneNumber = txtPhoneNumber.getText();
-        String patientAddress  = txtAddress.getText();
-        String patientEmail = txtEmail.getText();
+    private boolean isValidInput() {
+        String ageText = txtAge.getText();
 
-        if (patientId.isEmpty() || patientName.trim().isEmpty() || patientAge.isEmpty() || patientGender.isEmpty() || patientPhoneNumber.trim().isEmpty() || patientAddress.trim().isEmpty() || patientEmail.trim().isEmpty()) {
-            new Alert(Alert.AlertType.INFORMATION, "Please select data from table",ButtonType.CLOSE).show();
-            return;
+        if (lblPatientId.getText().isEmpty() || txtPatientName.getText().trim().isEmpty() || ageText.isEmpty()
+                || cmbGender.getSelectionModel().getSelectedItem() == null
+                || txtPhoneNumber.getText().trim().isEmpty()
+                || txtAddress.getText().trim().isEmpty()
+                || txtEmail.getText().trim().isEmpty()) {
+
+            new Alert(Alert.AlertType.WARNING, "Please fill in all required fields ⚠️", ButtonType.OK).show();
+            return false;
         }
 
-        PatientDTO patientDTO = new PatientDTO(
-                patientId,
-                patientName,
-                age,
-                patientGender,
-                patientPhoneNumber,
-                patientAddress,
-                patientEmail
-        );
+        if (!ageText.matches("\\d+")) {
+            new Alert(Alert.AlertType.WARNING, "Age must be a valid number 🧓", ButtonType.OK).show();
+            return false;
+        }
 
-        boolean isUpdated = patientBO.savePatient(patientDTO);
-        if (isUpdated) {
+        if (!txtPhoneNumber.getText().matches("\\d{10}")) {
+            new Alert(Alert.AlertType.WARNING, "Phone number must be 10 digits 📞", ButtonType.OK).show();
+            return false;
+        }
+
+        if (!txtEmail.getText().matches("^[\\w-.]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
+            new Alert(Alert.AlertType.WARNING, "Invalid email format 📧", ButtonType.OK).show();
+            return false;
+        }
+
+        return true;
+    }
+
+    private PatientDTO getPatientDTO() {
+        return new PatientDTO(
+                lblPatientId.getText(),
+                txtPatientName.getText(),
+                Integer.parseInt(txtAge.getText()),
+                cmbGender.getSelectionModel().getSelectedItem(),
+                txtPhoneNumber.getText(),
+                txtAddress.getText(),
+                txtEmail.getText()
+        );
+    }
+
+
+    @FXML
+    void btnSaveOnAction(ActionEvent event) throws Exception {
+        if (!isValidInput()) return;
+
+        PatientDTO patientDTO = getPatientDTO();
+        boolean isSaved = patientBO.savePatient(patientDTO);
+
+        if (isSaved) {
             refreshPage();
-            new Alert(Alert.AlertType.INFORMATION, "Patient saved successfully", ButtonType.OK).show();
-        }else {
-            new Alert(Alert.AlertType.ERROR, "Failed to save Patient",ButtonType.OK).show();
+            new Alert(Alert.AlertType.INFORMATION, "Patient saved successfully ✅", ButtonType.OK).show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Failed to save patient ❌", ButtonType.OK).show();
         }
     }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) throws Exception {
-        String patientId = lblPatientId.getText();
-        String patientName = txtPatientName.getText();
-        int age = Integer.parseInt(txtAge.getText());
-        String patientAge = txtAge.getText();
-        String patientGender = cmbGender.getSelectionModel().getSelectedItem();
-        String patientPhoneNumber = txtPhoneNumber.getText();
-        String patientAddress  = txtAddress.getText();
-        String patientEmail = txtEmail.getText();
+        if (!isValidInput()) return;
 
-        if (patientId.isEmpty() || patientName.trim().isEmpty() || patientAge.isEmpty() || patientGender.isEmpty() || patientPhoneNumber.trim().isEmpty() || patientAddress.trim().isEmpty() || patientEmail.trim().isEmpty()) {
-            new Alert(Alert.AlertType.INFORMATION, "Please select data from table",ButtonType.CLOSE).show();
-            return;
-        }
-
-        PatientDTO patientDTO = new PatientDTO(
-                patientId,
-                patientName,
-                age,
-                patientGender,
-                patientPhoneNumber,
-                patientAddress,
-                patientEmail
-        );
-
+        PatientDTO patientDTO = getPatientDTO();
         boolean isUpdated = patientBO.updatePatient(patientDTO);
+
         if (isUpdated) {
             refreshPage();
-            new Alert(Alert.AlertType.INFORMATION, "Patient updated successfully", ButtonType.OK).show();
-        }else {
-            new Alert(Alert.AlertType.ERROR, "Failed to update Patient",ButtonType.OK).show();
+            new Alert(Alert.AlertType.INFORMATION, "Patient updated successfully ✅", ButtonType.OK).show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Failed to update patient ❌", ButtonType.OK).show();
         }
     }
 

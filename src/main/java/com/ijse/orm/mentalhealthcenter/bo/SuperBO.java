@@ -6,11 +6,4 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface SuperBO {
-    boolean updatePatient(PatientDTO patientDTO) throws SQLException, ClassNotFoundException;
-    boolean savePatient(PatientDTO patientDTO) throws SQLException, ClassNotFoundException;
-    List<PatientDTO> getALL() throws Exception;
-    boolean deletePatient(String patientID) throws SQLException, ClassNotFoundException;
-    String getNextPatientID();
-//    List<MedicalHistoryD> getPatientHistory() throws SQLException, ClassNotFoundException;
-//    List<PatientsInEveryProgramDTO> getPatientsInEveryProgram();
 }
